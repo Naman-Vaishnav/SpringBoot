@@ -14,7 +14,7 @@ public class MyAppApplication {
 		 * Dev d=new Dev();
 		 * d.test();
 		 * works but we have to take care this object.
-		 * this won't be inside the container
+		 * this won't be inside the IOC container
 		 * 
 		 * How to get it from container?
 		 * 
@@ -23,8 +23,9 @@ public class MyAppApplication {
 		d.test();
 		/*
 		 * org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.ncv.myApp.Dev' available
-		 * Spring doesn't create object of all the classes. and we don't want it.
-		 * @Component in class
+		 * Spring doesn't create object of all the classes by default . and we don't want to create object of all classes.
+		 * How to tell spring boot so that it creates it?
+		 * ->@Component in class
 		 */
 
 	}
