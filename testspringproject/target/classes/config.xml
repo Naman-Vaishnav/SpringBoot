@@ -3,21 +3,48 @@
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 
-<beans>
-    <bean class="com.testspring.Dev" id="dev">
+<!-- Spring Bean Configuration -->
+<!-- <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ -->
+
+ <beans>
+
+         <bean class="com.testspring.Dev" id="dev" autowire="byType">
        <!-- <property name="age" value="12"/>  setter injection-->
         <!-- <constructor-arg value="24"/> constructor injection-->
 
         <!--  <property name="laptop" ref="laptop1" ></property>setter injection-->
-          <constructor-arg ref="laptop1"/>
+          <!-- <constructor-arg ref="laptop1"/> -->
+
+         <!-- with interface -->
+          <!-- <property name="comp" ref="laptop1"></property> -->
+            <!-- <constructor-arg ref="desk1"/>  -->
+
+            <!-- without below it will inject bevause we defined autowire -->
+            <!-- <property name="comp" ref="comp"></property> 
+            byName
+            it will search for bean with id as arg name
+            -->
 
     </bean>
 
     <!--It will create one more object of Dev-->
-    <bean class="com.testspring.Dev" id="dev1"></bean>
+    <!-- <bean class="com.testspring.Dev" id="dev1"></bean> -->
 
 
     <!-- without this object will not be created in IOC container -->
-    <bean class="com.testspring.Laptop" id="laptop1"></bean>
+    <!-- <bean class="com.testspring.Laptop" id="laptop1"></bean>
+
+    <bean class="com.testspring.Desktop" id="desk1"></bean> -->
+
+
+    <!-- <bean class="com.testspring.Laptop" id="comp" primary="true"></bean> -->
+    <bean class="com.testspring.Desktop" id="comp1"></bean>
+
+
 
 </beans>

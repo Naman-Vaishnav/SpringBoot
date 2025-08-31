@@ -2,29 +2,34 @@ package com.testspring;
 
 public class Dev {
 
-   private Laptop laptop;
+   private Computer comp;
 
 //    private int age=9;
 
     public Dev() {
     }
 
-    public Laptop getLaptop() {
-        return laptop;
-    }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
-    }
-
-    public Dev(Laptop laptop) {
-        this.laptop=laptop;
+    public Dev(Computer comp) {
+        this.comp=comp;
     //this.age = age;
     }
 
     public void build(){
-        System.out.println("In Dev class");
-        laptop.compile();
+        System.out.println("In Dev ");
+        comp.compile();
+    }
+
+
+
+    public Computer getComp() {
+        return comp;
+    }
+
+
+
+    public void setComp(Computer comp) {
+        this.comp = comp;
     }
 
     // public int getAge() {
