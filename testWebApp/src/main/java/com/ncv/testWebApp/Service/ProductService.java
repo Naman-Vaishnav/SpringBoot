@@ -10,10 +10,19 @@ import com.ncv.testWebApp.Model.Product;
 
 @Service
 public class ProductService {
-    List<Product> products=Arrays.asList(new Product(1, "P1", 10),new Product(2, "P2", 20));
+    List<Product> products=new ArrayList<>(Arrays.asList(new Product(1, "P1", 10),new Product(2, "P2", 20)));
 
 
     public List<Product> getProductus(){
         return products;
     }
+
+    public Product getProductById(int id){
+        return products.stream().filter(p->p.getProdId()==id).findFirst().get();
+    }
+
+    public void addProduct(Product product){
+        products.add(product);
+    }
+    
 }
