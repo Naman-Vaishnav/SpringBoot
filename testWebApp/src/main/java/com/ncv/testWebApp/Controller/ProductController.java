@@ -30,10 +30,20 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
-    @PostMapping("/product")
+    @PostMapping("/products")
     public String addProduct(@RequestBody Product product){
         productService.addProduct(product);
         return "Product added!!";
+    }
+
+    @PutMapping("/products")
+    public void updateProduct(@RequestBody Product product){
+        productService.updateProduct(product);
+    }
+
+    @DeleteMapping("/products/{ID}")
+    public void deleteProduct(@PathVariable int ID){
+        productService.deleteProduct(ID);
     }
 
 }
