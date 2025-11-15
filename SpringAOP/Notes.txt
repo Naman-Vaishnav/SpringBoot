@@ -1,0 +1,17 @@
+https://www.youtube.com/watch?v=EobKYha3nR0
+
+Aspect
+Join Point
+Advice
+PointCut
+
+AOP Proxies
+
+PointCur Expression
+    Before 
+    After
+    Around
+    After Returing
+    After Throwing
+
+  Named PointCut
