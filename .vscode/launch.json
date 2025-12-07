@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AopApplication<AOP>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.SpringAOP.AOP.AopApplication",
+            "projectName": "AOP",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

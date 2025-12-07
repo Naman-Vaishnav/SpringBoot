@@ -1,17 +1,22 @@
 https://www.youtube.com/watch?v=EobKYha3nR0
 
 Aspect
-Join Point
-Advice
-PointCut
 
-AOP Proxies
-
-PointCur Expression
+Advice -> What
     Before 
     After
     Around
     After Returing
     After Throwing
+
+Join Point 
+PointCut -> Where/When
+
+
+AOP Proxies
+
+PointCur Expression
+  Designators -execution,within ...
+   
 
   Named PointCut
